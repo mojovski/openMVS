@@ -81,7 +81,7 @@ git clone https://github.com/cdcseacave/VCG.git vcglib
 sudo apt-get -y install libatlas-base-dev libsuitesparse-dev
 git clone https://ceres-solver.googlesource.com/ceres-solver ceres-solver
 mkdir ceres_build && cd ceres_build
-cmake . ../ceres-solver/ -DMINIGLOG=ON -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF
+cmake . ../ceres-solver/ -DMINIGLOG=ON -DBUILD_TESTING=OFF -DBUILD_EXAMPLES=OFF -DEIGEN_INCLUDE_DIR:String="$main_path/eigen"
 make -j2 && sudo make install
 cd ..
 
